@@ -9,5 +9,7 @@ Routine Commands:
 
 Options:
 -i/-I [tags]: include any exercises with one of these tags
+
 -e/-E [tags]: exclude any exercises with one of these tags
+
 -r/-R [tags]: restrict to exercises with these tags in common
