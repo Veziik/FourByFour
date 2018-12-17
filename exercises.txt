@@ -1,0 +1,84 @@
+# exercises are ordered as follows
+# NAME , SLOTS, TAG1, TAG2, ...
+Pushups,1,pushup,arms,easy,power,chest,triceps,calisthenic,warmup
+Archer Pushups,1,pushup,arms,medium,power,deltoids,calisthenic
+Double-Wide Pushups,1,pushup,arms,easy,power,deltoids,calisthenic
+Diamond Pushups,1,pushup,arms,medium,power,triceps,calisthenic
+Military Pushups,1,pushup,arms,medium,power,triceps,calisthenic
+Handstand Pushups,1,pushup,arms,hard,power,shoulder,calisthenic
+Clapping Pushups,1,pushup,arms,hard,power,calisthenic
+Horizontal Pushup Walk,1,pushup,arms,easy,power,calisthenic
+Vertical Pushup Walk,1,pushup,arms,easy,power,calisthenic
+Elevated Leg Pushup,1,pushup,arms,medium,power,shoulder,calisthenic
+Pike Pushups,1,pushup,arms,shoulders,medium,power,calisthenic
+Shoulder Touches,1,arms,easy,speed,calisthenic,crawl,pushup,warmup
+Hand Cha Chas,1,arms,easy,speed,calisthenic,crawl,warmup
+Bear Crawl,1,arms,easy,speed,shoulders,calisthenic,crawl,warmup
+Walk Outs,1,arms,easy,speed,shoulders,calisthenic,crawl,warmup
+Lizard Walk,1,arms,meduim,power,chest,arms,shoulder,calisthenic,crawl,warmup
+Plank,1,abdominal,back,lowerback,easy,power,calisthenic,plank
+Plank Walk,1,abdominal,back,lowerback,chest,power,shoulder,calisthenic,medium,plank
+Body Drag From Flat To Pushup,1,back,chest,calisthenic,power,hard,drag
+Circling Jab Right+Left,2,arms,shoulders,easy,speed,bag,shadowbox,jab,strike,warmup
+Triple Tap Jab,1,arms,shoulders,easy,speed,bag,shadowbox,jab,strike
+Skip/Jab,1,arms,shoulders,easy,speed,bag,shadowbox,skip/jab,strike,warmup
+Skip/Jab/Cross,1,arms,shoulders,easy,speed,bag,shadowbox,skip/jab,strike
+Skip/Jab/Cross/Hook,1,arms,shoulders,easy,speed,bag,shadowbox,skip/jab,strike
+Skip/Jab/Cross/Upper,1,arms,shoulders,easy,speed,bag,shadowbox,skip/jab,strike
+Skip/Jab/Cross/Round Kick,1,arms,shoulders,easy,speed,bag,shadowbox,skipjab,strike,kick
+Low/High Hook Punch,1,arms,shoulders,medium,power,speed,bag,shadowbox,hookpunch,strike
+Hook Punch,1,arms,shoulders,medium,power,speed,bag,shadowbox,hookpunch,strike
+Triple Tap Hook Punch,1,arms,shoulders,medium,power,speed,bag,shadowbox,hookpunch,strike
+Hook/Backfist ,1,arms,shoulders,medium,power,speed,bag,shadowbox,hookpunch,strike
+Hook/Hook ,1,arms,shoulders,medium,power,speed,bag,shadowbox,hookpunch,strike
+Hook/Hook/Uppercut,1,arms,shoulders,medium,power,speed,bag,shadowbox,hookpunch,strike,kick
+Hook/Hook/Knee,1,arms,shoulders,medium,power,speed,bag,shadowbox,hookpunch,strike
+Hook/Hook/Knee/Knee,1,arms,shoulders,medium,power,speed,bag,shadowbox,hookpunch,strike,kick
+Continuous Hooks,1,arms,shoulders,medium,speed,bag,shadowbox,backfist,strike
+Inward Elbow,1,arms,shoulders,medium,power,speed,bag,shadowbox,inwardelbow,strike
+Triple Tap Inward Elbow,1,arms,shoulders,medium,power,speed,bag,shadowbox,inwardelbow,strike
+Inward Elbow/Outward Elbow,1,arms,shoulders,medium,power,speed,bag,shadowbox,inwardelbow,strike
+Inward Elbow/Inward Elbow ,1,arms,shoulders,medium,power,speed,bag,shadowbox,inwardelbow,strike
+Inward Elbow/Inward Elbow/Uppercut,1,arms,shoulders,medium,power,speed,bag,shadowbox,inwardelbow,strike
+Inward Elbow/Inward Elbow/Knee,1,arms,shoulders,medium,power,speed,bag,shadowbox,inwardelbow,strike,kick
+Inward Elbow/Inward Elbow/Knee/Knee,1,arms,shoulders,medium,power,speed,bag,shadowbox,inwardelbow,strike,kick
+Continuous Inward Elbow,1,arms,shoulders,medium,speed,bag,shadowbox,inwardelbow,strike
+Passing Inward Elbow,1,arms,shoulders,medium,speed,bag,shadowbox,inwardelbow,strike
+Circling Backfist Right+Left,2,shoulders,arms,triceps,speed,easy,bag,shadowbox,strike,warmup
+Skip Backfist ,1,shoulders,arms,triceps,speed,easy,bag,shadowbox,backfist,strike,warmup
+Skip Backfist/Hook ,1,shoulders,arms,triceps,speed,easy,bag,shadowbox,backfist,strike
+Skip Backfist/Cross ,1,shoulders,arms,triceps,speed,easy,bag,shadowbox,backfist,strike
+Skip Backfist Low/High Right+Left,1,shoulders,arms,triceps,speed,easy,bag,shadowbox,backfist,strike
+Skip Backfist/Jab,1,shoulders,arms,triceps,speed,easy,bag,shadowbox,backfist,strike
+Continuous Backfist Right+Left,2,shoulders,arms,triceps,speed,easy,bag,shadowbox,backfist,strike
+Passing Inward Elbow,1,shoulders,arms,power,chest,bag,shadowboxing,easy,strike
+Passing Inward Elbow/Knee,1,shoulders,arms,power,chest,bag,shadowboxing,easy,strike,kick
+Passing Inward Elbow/Front Kick,1,shoulders,arms,power,chest,bag,shadowboxing,easy,strike,kick
+Passing Inward Elbow/Elbow,1,shoulders,arms,power,chest,bag,shadowboxing,easy,strike,strike
+Passing Inward Elbow/Elbow/Knee,1,shoulders,arms,power,chest,bag,shadowboxing,easy,strike,kick
+Passing Inward Elbow/Elbow/Knee/Knee,1,shoulders,arms,power,chest,bag,shadowboxing,easy,strike,kick
+Bag Knockover,1,chest,shoulders,arms,power,bag,medium
+Bag Push,1,chest,shoulders,calves,quadriceps,hamstrings,arms,legs,medium
+Passing Hook Punch,1,chest,shoulders,arms,power,bag,shadowbox,medium,strike
+Passing Hook Punch/Front Kick,1,chest,shoulders,arms,power,bag,shadowbox,medium,strike,kick
+Passing Hook Punch/Knee,1,chest,shoulders,arms,power,bag,shadowbox,medium,strike,kick
+Passing Hook Punch/Hook Punch,1,chest,shoulders,arms,power,bag,shadowbox,medium,strike
+Passing Hook Punch/Hook Punch/Round Kick,1,chest,shoulders,arms,power,bag,shadowbox,medium,strike,kick
+Passing Hook Punch/Hook Punch/Round Kick/Round Kick,1,chest,shoulders,arms,power,bag,shadowbox,medium,strike,kick
+Frog Jumps,1,legs,quadriceps,hamstrings,calves,power,jumps,easy,calisthenic,warmup
+High Jumps,1,legs,quadriceps,hamstrings,calves,power,jumps,easy,calisthenic,warmup
+Long Jumps,1,legs,quadriceps,hamstrings,calves,power,jumps,easy,calisthenic,warmup
+Speed Skaters,1,legs,quadriceps,hamstrings,calves,power,jumps,easy,calisthenic,warmup
+Fake Outs,1,legs,quadriceps,hamstrings,calves,power,jumps,easy,calisthenic,warmup
+Bunny Hops,1,legs,calves,jumps,calisthenic,speed,easy,warmup
+Zigzag Bunny Hops,1,legs,calves,jumps,calisthenic,speed,easy,warmup
+Back/Foward Bunny Hops,1,legs,calves,jumps,calisthenic,speed,easy,warmup
+Cha Cha,1,legs,speed,quadriceps,calves,hamstrings,jumps,calisthenic,easy,warmup
+Wide/Narrow Hop,1,speed,quadriceps,calves,hamstrings,jumps,calisthenic,easy,warmup
+Pop Round,1,speed,power,legs,quadriceps,calves,hamstrings,hard,kick,jumps
+Jump Front,1,speed,power,legs,quadriceps,calves,hamstrings,hard,kick,jumps
+Jump Knee,1,speed,power,legs,quadriceps,calves,hamstrings,hard,kick,jumps
+Jump Round,1,speed,power,legs,quadriceps,calves,hamstrings,hard,kick,jumps
+Jump Back,1,speed,power,legs,quadriceps,calves,hamstrings,hard,kick,jumps
+Jump Side,1,speed,power,legs,quadriceps,calves,hamstrings,hard,kick,jumps
+Jump Axe,1,speed,power,legs,quadriceps,calves,hamstrings,hard,kick,jumps
