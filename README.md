@@ -5,6 +5,7 @@ USAGE: ./generate.py [routine name] [option1] [option2] ...
 
 Routine Commands: 
 4x4: 4 cycles of 4 exercises, each exercise lasts 45sec, 1min rest between cycles
+
 8x4: twice as many cycles as 4x4
 
 Options:
