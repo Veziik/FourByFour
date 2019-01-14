@@ -1,8 +1,8 @@
 #! /usr/bin/env python3
 import sys
-from classes import Exercise
-import random #random.randint(startint,endint)
-
+from classes import *
+import random
+import time
 
 def apply_preset(arguments):
 	preset = arguments['preset']
@@ -10,40 +10,88 @@ def apply_preset(arguments):
 	parguments['include'] = set()
 	parguments['restrict'] = set()
 	parguments['exclude'] = set()
+	parguments['cycleThemes'] = list()
 
 	if preset == 'balanced':
-		 parguments['include'].add('warmup')
-		 parguments['include'].add('legs')
-		 parguments['include'].add('arms')
-		 parguments['include'].add('power')
-		 parguments['include'].add('speed')
-		 parguments['include'].add('abdominals')
-		 parguments['include'].add('pushup')
-		 parguments['exclude'].add('hard')
+		parguments['include'].add('warmup')
+		parguments['include'].add('legs')
+		parguments['include'].add('arms')
+		parguments['include'].add('power')
+		parguments['include'].add('speed')
+		parguments['include'].add('abdominals')
+		parguments['include'].add('pushup')
+		parguments['exclude'].add('hard')
+
+
+		numberOfCycles = arguments['numberOfCycles']
+		legsOrArms = ['legs', 'arms']
+		speedOrPower = ['speed', 'power']
+		random.seed(time.time)
+		legsOrArmsFirst = random.randint(0,1)
+		random.seed(time.time)
+		speedOrPowerFirst = random.randint(0,1)
+
+
+		for i in range(numberOfCycles):
+			if i <= numberOfCycles/4:
+				parguments['cycleThemes'].append(['warmup'])
+			elif i <= 3*(numberOfCycles/8):
+				parguments['cycleThemes'].append([speedOrPower[speedOrPowerFirst] , legsOrArms[legsOrArmsFirst] ])
+			elif i <= 4*(numberOfCycles/8):
+				parguments['cycleThemes'].append([speedOrPower[1-speedOrPowerFirst] , legsOrArms[legsOrArmsFirst] ])
+			elif i <= 5*(numberOfCycles/8):
+				parguments['cycleThemes'].append([speedOrPower[speedOrPowerFirst] , legsOrArms[1-legsOrArmsFirst] ])
+			elif i <= 6*(numberOfCycles/8):
+				parguments['cycleThemes'].append([speedOrPower[1-speedOrPowerFirst] , legsOrArms[1-legsOrArmsFirst] ])
+			else:
+		 		parguments['cycleThemes'].append(['abdominals' , 'pushup'])
+
+
+
+
 	elif preset == 'legspeed':
-		 parguments['include'].add('speed')
-		 parguments['include'].add('warmup')
-		 parguments['restrict'].add('legs')
+		parguments['include'].add('speed')
+		parguments['include'].add('warmup')
+		parguments['restrict'].add('legs')
+
+		for i in range(numberOfCycles):
+			if i <= numberOfCycles/4:
+				parguments['cycleThemes'].append(['warmup'])
+
 	elif  preset == 'legstrength':
-		 parguments['include'].add('legs')
-		 parguments['include'].add('strength')
-		 parguments['include'].add('warmup')
-		 parguments['restrict'].add('legs')
+		parguments['include'].add('legs')
+		parguments['include'].add('strength')
+		parguments['include'].add('warmup')
+		parguments['restrict'].add('legs')
+
+		for i in range(numberOfCycles):
+			if i <= numberOfCycles/4:
+				parguments['cycleThemes'].append(['warmup'])
+
 	elif preset == 'armspeed':
-		 parguments['include'].add('arms')
-		 parguments['include'].add('speed')
-		 parguments['include'].add('warmup')
-		 parguments['restrict'].add('arms')
+		parguments['include'].add('arms')
+		parguments['include'].add('speed')
+		parguments['include'].add('warmup')
+		parguments['restrict'].add('arms')
+
+		for i in range(numberOfCycles):
+			if i <= numberOfCycles/4:
+				parguments['cycleThemes'].append(['warmup'])
+
 	elif preset == 'armstrength':
-		 parguments['include'].add('arms')
-		 parguments['include'].add('strength')
-		 parguments['include'].add('warmup')
-		 parguments['restrict'].add('arms')
+		parguments['include'].add('arms')
+		parguments['include'].add('strength')
+		parguments['include'].add('warmup')
+		parguments['restrict'].add('arms')
+
+		for i in range(numberOfCycles):
+			if i <= numberOfCycles/4:
+				parguments['cycleThemes'].append(['warmup'])
+
 	elif preset == 'abdominals':
-		 parguments['include'].add('arms')
-		 parguments['include'].add('strength')
-		 parguments['include'].add('warmup')
-		 parguments['restrict'].add('arms')
+		parguments['include'].add('abdominals')
+		parguments['include'].add('back')
+
 
 	return parguments
 
@@ -63,7 +111,9 @@ def import_exercises(filename, arguments):
 	for keyword in parguments['restrict']:
 		arguments['restrict'].add(keyword)
 
-	
+	if parguments['cycleThemes']:
+		arguments['cycleThemes'] = parguments['cycleThemes']
+
 
 
 	with open(filename, 'r') as file:
@@ -77,7 +127,7 @@ def import_exercises(filename, arguments):
 				for i in range(2, len(split)):
 					tags.add(split[i].replace(' ', '').lower())
 
-				if tags & include and len(tags & restrict) == len(restrict) and len(tags & exclude)== 0:
+				if (tags & include or 'all' in include) and len(tags & restrict) == len(restrict) and len(tags & exclude)== 0 :
 					newexercise = Exercise(name=name,slots=slots, tags=tags)
 					#newexercise.toString()
 					exercises.add(newexercise)
@@ -111,11 +161,12 @@ USAGE: ./generate.py [routine name] <option1> <option2> ...
 Routine Commands: 
 4x4: 4 cycles of 4 exercises, each exercise lasts 45sec, 1min rest between cycles
 8x4: twice as many cycles as 4x4
+list: List exercises, but do not order them into an exercise
 
 Options:
--i/-I <tags>: include any exercises with one of these tags
--e/-E <tags>: exclude any exercises with one of these tags
--r/-R <tags>: restrict all exercises to have all these tags
+-i/-I <tags>: Include any exercises with one of these tags
+-e/-E <tags>: Exclude any exercises with one of these tags
+-r/-R <tags>: Restrict all exercises to have all these tags
 ''')
 
 def parse_commands():
@@ -127,12 +178,23 @@ def parse_commands():
 	#Parse Routine To Construct
 	routine = sys.argv[1].lower() 
 	if  routine == '8x4' or routine == '30m hiit':
-		arguments['routine'] = '4x4' 
+		arguments['routineName'] = '4x4' 
+		arguments['numberOfCycles'] = 4
+		arguments['cycleSize'] = 4
+		arguments['onTime'] = 45
+		arguments['restTime'] = 60
 	elif routine == '4x4' or routine == '15m hiit':
-		arguments['routine'] = '8x4'
+		arguments['routineName'] = '8x4'
+		arguments['numberOfCycles'] = 8
+		arguments['cycleSize'] = 4
+		arguments['onTime'] = 45
+		arguments['restTime'] = 60
 	elif routine == 'help' or routine == '--help':
 		print_help()
 		exit(0)
+	elif routine == 'list':
+		arguments['routineName'] = None
+		arguments['numberOfCycles'] = 0
 	else:
 		print('Routine not recognized')
 		exit(0)
@@ -142,6 +204,7 @@ def parse_commands():
 	include = set()
 	restrict = set()
 	preset = None
+	
 
 	if(len(sys.argv) > 2):
 		i = 2
@@ -183,23 +246,47 @@ def parse_commands():
 		#print('exclude: ' + str(exclude))
 		#print('restrict: ' + str(restrict))
 		#print('preset: ' + str(preset))
-		arguments['preset'] = preset
-		arguments['include'] = include
-		arguments['exclude'] = exclude
-		arguments['restrict'] = restrict
+
+	if not include:
+		include.add('all')
+
+	arguments['preset'] = preset
+	arguments['include'] = include
+	arguments['exclude'] = exclude
+	arguments['restrict'] = restrict
+
 			
 
 	return arguments
 
 
+#TODO
+def list_exercises(exercises):
+	exerciseList = list()
+	for exercise in exercises:
+		exerciseList.append(exercise.name)
 
-
-
+	exerciseList.sort()
+	for name in exerciseList:
+		print(name) 
 
 
 def main():
 	arguments = parse_commands()
 	exercises = import_exercises('exercises.txt', arguments)
+	if not arguments['routineName']:
+		list_exercises(exercises)
+		arguments['routine'] = None
+	elif arguments['routineName'] == '4x4':
+		#arguments['routine'] = Routine(onTime=arguments.['onTime'], restTime=arguments.['restTime'], cycleSize=arguments['cycleSize'], numberOfCycles=arguments['numberOfCycles'], cycleThemes=arguments['cycleThemes'])
+		pass
+	elif arguments['routineName'] == '8x4':
+		#arguments['routine'] = Routine(onTime=arguments.['onTime'], restTime=arguments.['restTime'], cycleSize=arguments['cycleSize'], numberOfCycles=arguments['numberOfCycles'], cycleThemes=arguments['cycleThemes'])
+		pass
+
+
+	if arguments['routine']:
+		arguments['routine'].generateRoutineList(exercises)
 
 
 
@@ -209,3 +296,6 @@ if __name__ == '__main__':
 else:
 	print('no main')
 	exit(0)
+
+
+

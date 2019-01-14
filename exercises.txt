@@ -16,8 +16,10 @@ Hand Cha Chas,1,arms,easy,speed,calisthenic,crawl,warmup
 Bear Crawl,1,arms,easy,speed,shoulders,calisthenic,crawl,warmup
 Walk Outs,1,arms,easy,speed,shoulders,calisthenic,crawl,warmup
 Lizard Walk,1,arms,meduim,power,chest,arms,shoulder,calisthenic,crawl,warmup
-Plank,1,abdominal,back,lowerback,easy,power,calisthenic,plank
-Plank Walk,1,abdominal,back,lowerback,chest,power,shoulder,calisthenic,medium,plank
+Plank,1,	,easy,power,calisthenic,plank
+Left+Right Plank,2,abdominals,easy,power,calisthenic,plank
+Reverse Plank,1,easy,power,calisthenic,plank
+Plank Walk,1,abdominals,back,lowerback,chest,power,shoulder,calisthenic,medium,plank
 Body Drag From Flat To Pushup,1,back,chest,calisthenic,power,hard,drag
 Circling Jab Right+Left,2,arms,shoulders,easy,speed,bag,shadowbox,jab,strike,warmup
 Triple Tap Jab,1,arms,shoulders,easy,speed,bag,shadowbox,jab,strike
@@ -45,11 +47,11 @@ Inward Elbow/Inward Elbow/Knee/Knee,1,arms,shoulders,medium,power,speed,bag,shad
 Continuous Inward Elbow,1,arms,shoulders,medium,speed,bag,shadowbox,inwardelbow,strike
 Passing Inward Elbow,1,arms,shoulders,medium,speed,bag,shadowbox,inwardelbow,strike
 Circling Backfist Right+Left,2,shoulders,arms,triceps,speed,easy,bag,shadowbox,strike,warmup
-Skip Backfist ,1,shoulders,arms,triceps,speed,easy,bag,shadowbox,backfist,strike,warmup
-Skip Backfist/Hook ,1,shoulders,arms,triceps,speed,easy,bag,shadowbox,backfist,strike
-Skip Backfist/Cross ,1,shoulders,arms,triceps,speed,easy,bag,shadowbox,backfist,strike
-Skip Backfist Low/High Right+Left,1,shoulders,arms,triceps,speed,easy,bag,shadowbox,backfist,strike
-Skip Backfist/Jab,1,shoulders,arms,triceps,speed,easy,bag,shadowbox,backfist,strike
+Skip/Backfist ,1,shoulders,arms,triceps,speed,easy,bag,shadowbox,backfist,strike,warmup
+Skip/Backfist/Hook ,1,shoulders,arms,triceps,speed,easy,bag,shadowbox,backfist,strike
+Skip/Backfist/Cross ,1,shoulders,arms,triceps,speed,easy,bag,shadowbox,backfist,strike
+Skip/Backfist Low/High Right+Left,1,shoulders,arms,triceps,speed,easy,bag,shadowbox,backfist,strike
+Skip/Backfist/Jab,1,shoulders,arms,triceps,speed,easy,bag,shadowbox,backfist,strike
 Continuous Backfist Right+Left,2,shoulders,arms,triceps,speed,easy,bag,shadowbox,backfist,strike
 Passing Inward Elbow,1,shoulders,arms,power,chest,bag,shadowboxing,easy,strike
 Passing Inward Elbow/Knee,1,shoulders,arms,power,chest,bag,shadowboxing,easy,strike,kick
@@ -74,7 +76,7 @@ Bunny Hops,1,legs,calves,jumps,calisthenic,speed,easy,warmup
 Zigzag Bunny Hops,1,legs,calves,jumps,calisthenic,speed,easy,warmup
 Back/Foward Bunny Hops,1,legs,calves,jumps,calisthenic,speed,easy,warmup
 Cha Cha,1,legs,speed,quadriceps,calves,hamstrings,jumps,calisthenic,easy,warmup
-Wide/Narrow Hop,1,speed,quadriceps,calves,hamstrings,jumps,calisthenic,easy,warmup
+Wide/Narrow Hop,1,speed,quadriceps,calves,hamstrings,jumps,calisthenic,easy,warmup,legs
 Pop Round,1,speed,power,legs,quadriceps,calves,hamstrings,hard,kick,jumps
 Jump Front,1,speed,power,legs,quadriceps,calves,hamstrings,hard,kick,jumps
 Jump Knee,1,speed,power,legs,quadriceps,calves,hamstrings,hard,kick,jumps
