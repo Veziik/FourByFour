@@ -6,6 +6,7 @@ import time
 
 def apply_preset(arguments):
 	preset = arguments['preset']
+	numberOfCycles = arguments['numberOfCycles']
 	parguments = dict()
 	parguments['include'] = set()
 	parguments['restrict'] = set()
@@ -17,13 +18,13 @@ def apply_preset(arguments):
 		parguments['include'].add('legs')
 		parguments['include'].add('arms')
 		parguments['include'].add('power')
-		parguments['include'].add('speed')
+		parguments['include'].add('speed') 
 		parguments['include'].add('abdominals')
 		parguments['include'].add('pushup')
 		parguments['exclude'].add('hard')
 
 
-		numberOfCycles = arguments['numberOfCycles']
+		
 		legsOrArms = ['legs', 'arms']
 		speedOrPower = ['speed', 'power']
 		random.seed(time.time)
@@ -260,7 +261,7 @@ def parse_commands():
 	return arguments
 
 
-#TODO
+
 def list_exercises(exercises):
 	exerciseList = list()
 	for exercise in exercises:
@@ -278,8 +279,8 @@ def main():
 		list_exercises(exercises)
 		arguments['routine'] = None
 	elif arguments['routineName'] == '4x4':
-		#arguments['routine'] = Routine(onTime=arguments.['onTime'], restTime=arguments.['restTime'], cycleSize=arguments['cycleSize'], numberOfCycles=arguments['numberOfCycles'], cycleThemes=arguments['cycleThemes'])
-		pass
+		arguments['routine'] = Routine(onTime=arguments['onTime'], restTime=arguments['restTime'], cycleSize=arguments['cycleSize'], numberOfCycles=arguments['numberOfCycles'], cycleThemes=arguments['cycleThemes'])
+		
 	elif arguments['routineName'] == '8x4':
 		#arguments['routine'] = Routine(onTime=arguments.['onTime'], restTime=arguments.['restTime'], cycleSize=arguments['cycleSize'], numberOfCycles=arguments['numberOfCycles'], cycleThemes=arguments['cycleThemes'])
 		pass
